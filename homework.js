@@ -68,10 +68,10 @@ function searchBand(argName) {
 }
 ​
 //write a fn called pythagorean(a,b) have it return the value of c^2
-​function pythagorean(a,b) {
-    a = a*a;
-    b = b*b;
-    var c = a+b;
+​function pythagorean(a, b) {
+    a = a * a;
+    b = b * b;
+    var c = a + b;
     return c;
 }
 ​
@@ -82,11 +82,25 @@ function searchBand(argName) {
 */
 ​
 //Write a CellPhone constructor function that accepts the following arguments (string: brand, number: screenSize, string: carrier)
-​
+​function CellPhone(brand, screenSize, carrier) {
+    this.brand = brand;
+    this.screenSize = screenSize;
+    this.carrier = carrier;
+}
 //Write a function called sumAll that accepts an array of numbers and returns the sum of all items in the array
-​
+​function sumAll(numbers) {
+    var total = numbers.reduce(function (a, b) {
+        return a + b;
+    });
+    return total;
+}
 //write an isEqual function that accepts two arguments and returns a boolean (3,'3') returns false ('abc', 'abc') returns true
-​
+​function isEqual(x, y) {
+    if (typeof x != typeof y) return false;
+    // unsure if you want to match content as well but that would just need this line added:
+    // if(x != y) return false;
+    return true;
+}
 //write a function called inStock that accepts a productId or productName and returns the product if it is in stock based on its quantity
 ​
 var products = [{
@@ -107,4 +121,15 @@ var products = [{
         url: 'http://res.cloudinary.com/spartz/image/upload/c_lfill,f_auto,fl_lossy,q_60,w_806/v1/prod/images/dde306374cd35acff10f52eb4c586b5d.jpeg',
         quantity: 280,
         price: 0.99
-    }]
+    }];
+
+function inStock(searchString) {
+    for (var i = 0; i < products.length; i++) {
+        var currentProduct = products[i];
+        if (currentProduct.id === searchString || currentProduct.name === searchString) {
+            if (currentProduct.quantity != 0) return "Product is in stock: " + currentProduct.quantity;
+            else return "Product is out of stock.";
+        }
+    }
+    return "Sorry, I can't seem to find " + searchString;
+}
