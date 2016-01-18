@@ -69,11 +69,12 @@ var theBand = {
 }
 function searchBand(argName) {
     for (var i = 0; i < theBand.members.length; i++) {
-        if (theBand.members[i].name === argName) return theBand.members[i].name + " is in the band and plays the " + theBand.members[i].instrument;
+        var currentMember = theBand.members[i];
+        if (currentMember.name === argName) return currentMember.name + " is in the band and plays the " + currentMember.instrument;
     }
     return "Sorry, I don't think " + argName + " is in the band.";
 }
- 
+
  
  
  
