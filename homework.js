@@ -1,8 +1,13 @@
 //Write a function called cubed(x) that accepts an argument x and returns its cubed value
-​function cubed(x) {
-    var result = x * x * x;
+​function cubed(base) {
+    var result = base * base * base;
     return result;
 }
+
+
+
+
+
 //write a function called power that accepts two args (base, exp) and returns the power  
 ​function power(base, exp) {
     var result = 1;
@@ -11,6 +16,11 @@
     }
     return result;
 }
+
+
+
+
+
 /*
 * write a function called logArr that will log each item in an array
 */
@@ -19,6 +29,11 @@
         console.log(array[i]);
     }
 }
+
+
+
+
+
 /**
     Fill in the necessary parts of the findById function below
 */
@@ -32,6 +47,10 @@ function findById(id) {
 findById(17) //Should return {id: 17, name: 'St. MaryLou de la playa carmen'}
 findById(1000) //Should return 4 {error: 'Sorry that user id could not be found'} ****Upshift Challenge
 ​
+
+
+
+
 //Write a function that accepts a name argument and will loop over theBand and return the band member's name and the instrument that he/she plays
 //use string concat to return the sentence below 
 // [band-members-name] is in the band and plays the [band-members-instrument];
@@ -55,6 +74,10 @@ function searchBand(argName) {
     return "Sorry, I don't think " + argName + " is in the band.";
 }
  
+ 
+ 
+ 
+ 
 //write a fn that accepts two arguments a (sentence, letter) have the function return the number of times that letter repeats in the sentence
 ​function letterCount(argString, argLetter) {
     argString = argString.toLowerCase();
@@ -67,6 +90,10 @@ function searchBand(argName) {
     return "The letter: " + argLetter + " was found " + result + " times.";
 }
 ​
+
+
+
+
 //write a fn called pythagorean(a,b) have it return the value of c^2
 ​function pythagorean(a, b) {
     a = a * a;
@@ -75,6 +102,10 @@ function searchBand(argName) {
     return c;
 }
 ​
+
+
+
+
 /**
     Best Practice: Constructor functions are the only variables that start with an uppercase letter
     The keyword this refers to a single instance
@@ -87,6 +118,11 @@ function searchBand(argName) {
     this.screenSize = screenSize;
     this.carrier = carrier;
 }
+
+
+
+
+
 //Write a function called sumAll that accepts an array of numbers and returns the sum of all items in the array
 ​function sumAll(numbers) {
     var total = numbers.reduce(function (a, b) {
@@ -94,6 +130,11 @@ function searchBand(argName) {
     });
     return total;
 }
+
+
+
+
+
 //write an isEqual function that accepts two arguments and returns a boolean (3,'3') returns false ('abc', 'abc') returns true
 ​function isEqual(x, y) {
     if (typeof x != typeof y) return false;
@@ -101,6 +142,11 @@ function searchBand(argName) {
     // if(x != y) return false;
     return true;
 }
+
+
+
+
+
 //write a function called inStock that accepts a productId or productName and returns the product if it is in stock based on its quantity
 ​
 var products = [{
